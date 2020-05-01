@@ -1,0 +1,19 @@
+<div>
+    <table border="1">
+        <th colspan="6">Corona Cases</th>
+        <tr>
+            <th>Date</th>
+            <th>Region</th>
+            <th>Cases</th>
+            <th>Recovered</th>
+            <th>Deaths</th>
+        </tr>
+            {% for row in result %}
+            <tr>
+                {% for key,value in row.items() %}
+                        <td>{{value}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+    </table>
+</div>
